@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+          <input type="text" id="cityInput" placeholder="Entrez une ville..." />
+          <button id="searchBtn">Rechercher</button>
+        </div>
+        <img id="weatherIcon" alt="Icône Météo">
+    
+        <!-- Résultats météo -->
+        <div id="weatherResults" class="hidden">
+          <h2 id="cityName"></h2>
+          <div class="weather-info">
+            <p id="temperature"></p>
+            <p id="description"></p>
+          </div>
+          <p> Humidité : <span id="humidity"></span>%</p>
+          <p> Vent : <span id="windSpeed"></span> km/h</p>
+    
+          <!-- Prévisions sur 5 jours -->
+          <div id="forecast"></div>
+        </div>
+    
+        <!-- Historique des recherches -->
+        <div id="history">
+          <h3>Historique des recherches</h3>
+          <ul id="historyList"></ul>
+        </div>
+        <ul id="ulsa">
+          <li class="lisa"><a href="1.html" class="asa">Accueil</a></li>
+          <li class="lisa"><a href="log.html" class="asa">se connecter</a></li>
+          <li class="lisa"><a href="sign.html" class="asa">s'inscrire</a></li>
+      </ul>
+        <button id="clearHistoryBtn">Effacer l'historique</button>
+        <button id="darkModeToggle">Mode Sombre/Clair</button>
+
+      </div>
+      <script src="./1.js" type="module"></script>
+      <script src="./2.js" type="module"></script>
+      <script src="./3.js" type="module"></script>
+      <script src="./geo.js"></script>
+      <div id="weather-info"></div>
+
+
+</body>
+
+</html>

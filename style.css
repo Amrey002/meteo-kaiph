@@ -1,0 +1,301 @@
+/* Mode par défaut (mode clair) */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(./imagemars2025/meteo3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style pour la navigation en haut à droite */
+#ulsa {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: grey; 
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+}
+
+.lisa {
+  margin-left: 15px;
+}
+
+.asa {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.asa:hover {
+  color: #4caf50;
+}
+
+/* Mode sombre */
+body[data-theme='dark'] {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Mode sombre pour la barre de navigation */
+body[data-theme='dark'] #ulsa {
+  background-color: #333;
+}
+
+/* Container principal */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #33b5cc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mode sombre pour le container */
+body[data-theme='dark'] .container {
+  background-color: #333333;
+}
+
+/* Barre de recherche */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+/* Fond doux pour les yeux */
+#bodysa {
+  background-color: #f4f4f9; 
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Container principal */
+#containersa {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+#h1sa {
+  font-size: 28px;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Titres secondaires */
+.h2sa {
+  font-size: 22px;
+  color: #333;
+  margin-top: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+}
+
+/* Paragraphes */
+#psa {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Liste */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+/* Input et bouton */
+input, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus, button:focus {
+  border-color: #4caf50;
+}
+
+/* Bouton */
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Mode sombre pour le bouton */
+body[data-theme='dark'] button {
+  background-color: #757575;
+}
+
+/* Informations météo */
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  width: 50px;
+}
+
+/* Masquer les éléments */
+.hidden {
+  display: none;
+}
+
+/* Historique */
+#history {
+  margin-top: 20px;
+}
+
+#historyList li {
+  list-style: none;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #e61111;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#historyList li:hover {
+  background-color: #dddddd;
+}
+
+/* Mode sombre pour les éléments de l'historique */
+body[data-theme='dark'] #historyList li {
+  background-color: #444444;
+}
+
+/* Formulaire d'inscription */
+#signupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#signupForm label, 
+#signupForm input, 
+#signupForm button {
+  margin-bottom: 15px;
+}
+
+#signupForm input, 
+#signupForm button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#signupForm button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#signupForm button:hover {
+  background-color: #45a049;
+}
+
+/* Mode sombre pour le formulaire */
+body[data-theme='dark'] #signupForm input, 
+body[data-theme='dark'] #signupForm button {
+  background-color: #555;
+  color: white;
+  border-color: #777;
+}
+
+/* Responsive pour les tablettes */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  .weather-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 40px;
+  }
+
+  #ulsa {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Responsive pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  #ulsa {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .lisa {
+    margin-bottom: 5px;
+  }
+}
